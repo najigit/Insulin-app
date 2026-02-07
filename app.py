@@ -80,13 +80,22 @@ elif meal == "ناهار":
 #st.header("مرحله ۳")
 
 textbox1 = st.number_input(
-    "تعداد نان:",
+    "تعداد نان (سنگک کف دست با انگشت/ بربری فقط کف دست):",
     min_value=0,
     step=1,
     format="%d",
     value=None,
     placeholder="0"
 )
+
+bread = st.radio(
+    "وعده غذایی را انتخاب کنید:",
+    ("آبکش یا مخلوط", "کته")
+)
+if bread == "آبکش یا مخلوط":
+    k = 3
+elif bread == "کته":
+    k = 2
 
 textbox2 = st.number_input(
     "تعداد قاشق برنج:",
@@ -111,7 +120,7 @@ textbox1 = textbox1 if textbox1 is not None else 0
 textbox2 = textbox2 if textbox2 is not None else 0
 textbox3 = textbox3 if textbox3 is not None else 0
 
-c = textbox1 + (textbox2 / 2) + textbox3
+c = textbox1 + (textbox2 / k) + textbox3
 
 # -----------------------------
 # مرحله ۴
