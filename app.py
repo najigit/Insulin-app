@@ -107,7 +107,7 @@ textbox2 = st.number_input(
 )
 
 textbox3 = st.number_input(
-    "هویج / ماست / دوغ / موارد اضافه:",
+    "هویج / ماست / دوغ / میوه / یه لیوان حبوبات / موارد اضافه:",
     min_value=0,
     step=1,
     format="%d",
@@ -156,4 +156,5 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
