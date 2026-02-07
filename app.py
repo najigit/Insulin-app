@@ -89,7 +89,7 @@ textbox1 = st.number_input(
 )
 
 bread = st.radio(
-    "وعده غذایی را انتخاب کنید:",
+    "نوع برنج وارد کنید:",
     ("آبکش یا مخلوط", "کته")
 )
 if bread == "آبکش یا مخلوط":
@@ -156,3 +156,4 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
