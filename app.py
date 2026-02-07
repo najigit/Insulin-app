@@ -127,8 +127,9 @@ textbox4 = st.number_input(
 textbox1 = textbox1 if textbox1 is not None else 0
 textbox2 = textbox2 if textbox2 is not None else 0
 textbox3 = textbox3 if textbox3 is not None else 0
+textbox4 = textbox3 if textbox3 is not None else 0
 
-c = textbox1 + (textbox2 / k) + (textbox3/2)+ textbox4
+c = textbox1 + (textbox2 / k) + (textbox3 /2) + textbox4
 
 # -----------------------------
 # مرحله ۴
@@ -164,6 +165,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
