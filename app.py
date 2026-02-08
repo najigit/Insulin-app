@@ -165,6 +165,9 @@ if calculate:
     else:
         insulin_final = math.floor(insulin)
 
+    if insulin_final>6
+        insulin_final=6
+
     st.markdown("---")
     st.markdown(
         f"<h1 style='text-align:center; color:red;'>💉 {insulin_final} واحد</h1>",
@@ -175,6 +178,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
