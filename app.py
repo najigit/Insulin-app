@@ -70,7 +70,7 @@ meal = st.radio(
 )
 
 if meal == "صبحانه" or meal == "شام":
-    z = 2
+    z = 1.5
 elif meal == "ناهار":
     z = 1
 
@@ -178,6 +178,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
