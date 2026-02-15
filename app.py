@@ -161,7 +161,12 @@ with col2:
     calculate = st.button("محاسبه انسولین")
 
 if calculate:
-    insulin= ((b+(c*40))-120)/novo
+    if meal == "شام" :
+         insulin= ((b+(c*40))-180)/novo
+    elif meal == "صبحانه":
+         insulin= ((b+(c*40))-120)/novo
+    else:
+        insulin= ((b+(c*40))-110)/novo
    
     if insulin < 0:
         insulin = 0
@@ -187,6 +192,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
