@@ -53,11 +53,19 @@ b = st.number_input(
     value=None,
     placeholder="مثلاً 180"
 )
-
+t = st.number_input(
+    "چند واحد توجئ. تزریق کردید؟:",
+    min_value=0,
+    step=1,
+    format="%d",
+    value=None,
+    placeholder="مثلاً 9"
+)
 g = 130
 
 # اگر خالی باشد صفر در نظر گرفته شود
 b = b if b is not None else 0
+t = t if t is not None else 0
 
 # -----------------------------
 # مرحله ۲
@@ -180,11 +188,11 @@ with col2:
 
 if calculate:
     if meal == "شام" :
-         insulin= ((b+(c*40))-180)/novo
+         insulin= (b+(c*40)-(2.6*t) -180)/novo
     elif meal == "صبحانه":
-         insulin= ((b+(c*40))-120)/novo
+         insulin= (b+(c*40)-(1.3*t)-120)/novo
     else:
-        insulin= ((b+(c*40))-110)/novo
+        insulin= (b+(c*40)-(2.6*t)-110)/novo
    
     if insulin < 0:
         insulin = 0
@@ -210,6 +218,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
