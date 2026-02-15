@@ -146,7 +146,7 @@ textbox2 = textbox2 if textbox2 is not None else 0
 textbox3 = textbox3 if textbox3 is not None else 0
 textbox4 = textbox4 if textbox4 is not None else 0
 textbox5 = textbox5 if textbox5 is not None else 0
-textbox6 = textbox6 if textbox5 is not None else 0
+textbox6 = textbox6 if textbox6 is not None else 0
 
 
 c = textbox1 + (textbox2 / k) + (textbox3 / 2) + textbox4 + (textbox5 * 2)+ (textbox6 * 1.8)
@@ -187,6 +187,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
