@@ -195,11 +195,11 @@ with col2:
 
 if calculate:
     if meal == "شام" :
-         insulin= (b+(c*40)-(2*(2.6*t)) -180 - textbox9)/novo
+         insulin= (b+(c*40)-(2*(2.6*t)) -180 - (textbox9*30))/novo
     elif meal == "صبحانه":
-         insulin= (b+(c*40)-(2*(1.3*t))-140- textbox9)/novo
+         insulin= (b+(c*40)-(2*(1.3*t))-140- (textbox9*30))/novo
     else:
-        insulin= (b+(c*40)-(2*(2.6*t))-140- textbox9)/novo
+        insulin= (b+(c*40)-(2*(2.6*t))-140- (textbox9*30))/novo
    
     if insulin < 0:
         insulin = 0
@@ -225,6 +225,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
