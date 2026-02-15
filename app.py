@@ -72,7 +72,7 @@ meal = st.radio(
 if meal == "ناهار" or meal == "شام" or meal=="میان وعده عصر":
     novo = 60
 elif meal == "صبحانه" or meal=="میان وعده صبح":
-    vono = 40
+    novo = 40
 
 # -----------------------------
 # مرحله ۳
@@ -187,6 +187,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
