@@ -139,6 +139,22 @@ textbox6 = st.number_input(
     value=None,
     placeholder="0"
 )
+textbox7 = st.number_input(
+    "یک مشت دست میوه",
+    min_value=0,
+    step=1,
+    format="%d",
+    value=None,
+    placeholder="0"
+)
+textbox8 = st.number_input(
+    "شیر",
+    min_value=0,
+    step=1,
+    format="%d",
+    value=None,
+    placeholder="0"
+)
 
 # اگر خالی باشند صفر شوند
 textbox1 = textbox1 if textbox1 is not None else 0
@@ -147,9 +163,11 @@ textbox3 = textbox3 if textbox3 is not None else 0
 textbox4 = textbox4 if textbox4 is not None else 0
 textbox5 = textbox5 if textbox5 is not None else 0
 textbox6 = textbox6 if textbox6 is not None else 0
+textbox7 = textbox7 if textbox7 is not None else 0
+textbox8 = textbox8 if textbox8 is not None else 0
 
 
-c = textbox1 + (textbox2 / k) + (textbox3 / 2) + textbox4 + (textbox5 * 2)+ (textbox6 * 1.8)
+c = textbox1 + (textbox2 / k) + (textbox3 / 2) + textbox4 + (textbox5 * 2)+ (textbox6 * 1.8)+ textbox7+ textbox8
 
 # -----------------------------
 # مرحله ۴
@@ -192,6 +210,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
