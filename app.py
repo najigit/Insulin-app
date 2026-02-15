@@ -163,7 +163,14 @@ textbox8 = st.number_input(
     value=None,
     placeholder="0"
 )
-
+textbox9 = st.number_input(
+    "چند تا نیم ساعت پیاده روی داری؟/ یا چندتا یک ربع ورزش سنگین داری؟",
+    min_value=0,
+    step=1,
+    format="%d",
+    value=None,
+    placeholder="0"
+)
 # اگر خالی باشند صفر شوند
 textbox1 = textbox1 if textbox1 is not None else 0
 textbox2 = textbox2 if textbox2 is not None else 0
@@ -173,7 +180,7 @@ textbox5 = textbox5 if textbox5 is not None else 0
 textbox6 = textbox6 if textbox6 is not None else 0
 textbox7 = textbox7 if textbox7 is not None else 0
 textbox8 = textbox8 if textbox8 is not None else 0
-
+textbox9 = textbox9 if textbox9 is not None else 0
 
 c = textbox1 + (textbox2 / k) + (textbox3 / 2) + textbox4 + (textbox5 * 2)+ (textbox6 * 1.8)+ textbox7+ textbox8
 
@@ -188,11 +195,11 @@ with col2:
 
 if calculate:
     if meal == "شام" :
-         insulin= (b+(c*40)-(2*(2.6*t)) -180)/novo
+         insulin= (b+(c*40)-(2*(2.6*t)) -180 - textbox9)/novo
     elif meal == "صبحانه":
-         insulin= (b+(c*40)-(2*(1.3*t))-140)/novo
+         insulin= (b+(c*40)-(2*(1.3*t))-140- textbox9)/novo
     else:
-        insulin= (b+(c*40)-(2*(2.6*t))-140)/novo
+        insulin= (b+(c*40)-(2*(2.6*t))-140- textbox9)/novo
    
     if insulin < 0:
         insulin = 0
@@ -218,6 +225,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
