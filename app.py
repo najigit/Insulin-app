@@ -163,8 +163,8 @@ with col2:
 if calculate:
     insulin= ((b+(c*40))-120)/novo
    
-  #  if insulin < 0:
-  #      insulin = 0
+   if insulin < 0:
+        insulin = 0
 
     # ===== گرد کردن سفارشی =====
     decimal_part = insulin - math.floor(insulin)
@@ -187,6 +187,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
