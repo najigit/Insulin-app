@@ -66,7 +66,7 @@ b = b if b is not None else 0
 
 meal = st.radio(
     "وعده غذایی را انتخاب کنید:",
-    ("صبحانه", "ناهار", "شام")
+    ("صبحانه", "ناهار", "شام","میان وعده صبح","میان وعده عصر")
 )
 
 if meal == "ناهار" or meal == "شام" or meal=="میان وعده عصر":
@@ -187,6 +187,7 @@ if calculate:
         f"<h3 style='text-align:center;'>شما باید {insulin_final} واحد انسولین تزریق کنید</h3>",
         unsafe_allow_html=True
     )
+
 
 
 
